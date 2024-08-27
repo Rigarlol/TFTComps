@@ -1,6 +1,10 @@
 import FotoDerso from './assets/derso.png';
+
 import Botao from "../../components/Botao";
 import styled from 'styled-components';
+import CardEspecialidades from '../../components/CardEspecialidades';
+import { Bs8Square, BsCast, BsTiktok } from 'react-icons/bs';
+
 
 
 const SectionTopoDoSite = styled.section`
@@ -43,8 +47,22 @@ const Imagem = styled.img`
         top: 30px;
     }
 }
-    
 `
+
+const SectionEspecialidades = styled.section`
+    padding: 40px 4%;
+`
+const ContainerEspecialidades = styled.div`
+    display: flex;
+    gap: 60px;
+`
+
+const SubTitulo = styled.h2`
+    font-size: 38px;
+    text-align: center;
+    color: white;
+`
+
 
 export default function Home() {
     return (
@@ -62,12 +80,28 @@ export default function Home() {
                 </ContainerTopoDoSite>
             </SectionTopoDoSite>
 
-            <section>
+            <SectionEspecialidades>
                 <div>
-                    <h2></h2>
-                    <div></div>
+                    <SubTitulo>MINHAS <Span>ESPECIALIDADES</Span></SubTitulo>
+                    <ContainerEspecialidades>
+                        <CardEspecialidades
+                            icon={<Bs8Square />}
+                            titulo="Rei do Top 8"
+                            texto="Aproximadamente 90% dos meus games eu consigo o top 8."  
+                        />
+                        <CardEspecialidades
+                            icon={<BsCast />}
+                            titulo="Ótimo streamer"
+                            texto="Na minha live você encontra de tudo. Até pessoas de renome como: Pedrocaçapa."  
+                        />
+                        <CardEspecialidades
+                            icon={<BsTiktok />}
+                            titulo="Tiktoker"
+                            texto="Um dos maiores tiktokers do Brasil."  
+                        />
+                    </ContainerEspecialidades>
                 </div>
-            </section>
+            </SectionEspecialidades>
         </main>
     )
 }
