@@ -19,8 +19,8 @@ const Button = styled.button`
     }
 `
 
-export default function Botao( {children} ){
-    return(
+export default function Botao({ children }) {
+    return (
         <Button type="button">{children}</Button>
     )
 }
