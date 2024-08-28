@@ -1,16 +1,21 @@
 import styled from "styled-components"
 
-
 const Button = styled.button`
-    padding: 10px 40px;
-    font-size: 18px;
+    padding: ${props => props.$ativo ? '' : '10px 40px;'};
+    font-size: ${props => props.$ativo ? '25px' : '18px'};
     font-weight: 700;
     background-color: rgba(255, 6, 6, 0.677);
     color: white;
     border: none;
     cursor: pointer;
-    border-radius: 30px;
+    border-radius: ${props => props.$ativo ? '50px' : '30px'};
     transition: .2s;
+    width: ${props => props.$ativo ? '60px' : ''};
+    height: ${props => props.$ativo ? '60px' : ''};
+    margin: ${props => props.$ativo? '0 5px': ''};
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     //adicionando o hover
     &:hover {
@@ -19,8 +24,10 @@ const Button = styled.button`
     }
 `
 
-export default function Botao({ children }) {
+export default function Botao({ children, ativo = false }) {
     return (
-        <Button type="button">{children}</Button>
+        <Button $ativo={ativo} type="button">
+            {children}
+        </Button>
     )
 }
