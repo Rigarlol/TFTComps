@@ -18,6 +18,11 @@ const ContainerTopoDoSite = styled.div`
     align-items: center;
     justify-content: center;
     gap: 90px;
+
+    @media screen and (max-width: 1020px) {
+        flex-direction: column;
+        padding: 20px 8%;
+    }
 `
 
 const Titulo = styled.h1`
@@ -51,10 +56,18 @@ const Imagem = styled.img`
 
 const SectionEspecialidades = styled.section`
     padding: 40px 4%;
+
+    
 `
 const ContainerEspecialidades = styled.div`
     display: flex;
     gap: 60px;
+
+    @media screen and (max-width: 1020px) {
+        flex-direction: column;
+        padding: 40px 8%;
+    }
+    
 `
 
 const SubTitulo = styled.h2`
