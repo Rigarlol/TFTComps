@@ -21,7 +21,7 @@ const ContainerTopoDoSite = styled.div`
 
     @media screen and (max-width: 1020px) {
         flex-direction: column;
-        padding: 20px 8%;
+        padding: 20px 7%;
     }
 `
 
@@ -29,6 +29,12 @@ const Titulo = styled.h1`
     color: white;
     font-size: 40px;
     line-height: 45px;
+
+    @media screen and (max-width: 1020px) {
+        font-size: 30px;
+        
+        
+    }
 `
 
 const Span = styled.span`
@@ -38,6 +44,10 @@ const Span = styled.span`
 const Paragrafo = styled.p`
     color: white;
     margin: 40px 0;
+
+    @media screen and (max-width: 1020px) {
+        text-align: justify;
+    }
 `
 
 const Imagem = styled.img`

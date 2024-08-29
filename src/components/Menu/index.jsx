@@ -17,7 +17,9 @@ const LinkEstilizado = styled(Link)`
 const Nav = styled.nav`
     list-style-type: none;
     
-    
+    @media screen and (max-width: 1020px) {
+        display: none;
+    }
 `
 
 const Ul = styled.ul`

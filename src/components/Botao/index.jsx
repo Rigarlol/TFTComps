@@ -22,6 +22,10 @@ const Button = styled.button`
         box-shadow: 0px 0px 8px rgb(247, 5, 5);
         transform: scale(1.05);
     }
+
+    @media screen and (max-width: 1020px) {
+        display: none;
+    }
 `
 
 export default function Botao({ children, ativo = false }) {
