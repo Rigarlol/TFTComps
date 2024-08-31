@@ -24,7 +24,7 @@ const Button = styled.button`
     }
 
     @media screen and (max-width: 1020px) {
-        display: none;
+        display: ${props => props.$ativo ? 'block' : 'none'};
     }
 `
 
