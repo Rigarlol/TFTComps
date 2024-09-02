@@ -1,5 +1,7 @@
 import styled from "styled-components"
-
+import Ahri from './assets/ahri-teste1.png'
+import Blitz from './assets/blitz-sentinela.png'
+import CardComposicoes from "../../components/CardComposicoes"
 
 
 const CompsSection = styled.section`
@@ -28,7 +30,23 @@ const Container = styled.div`
     margin: 50px 0px;
 `
 
+
+
 export default function Comps() {
+
+    const dados = [
+        {   
+            id: 1,
+            tituloCard: 'Ahri KDA',
+            imagem: './assets/ez-bigshot.png'
+        },
+        {
+            id: 2,
+            tituloCard: 'Blitz',
+            imagem: {Blitz}
+        }
+    ]
+
     return (
         <CompsSection>
             <div>
@@ -39,7 +57,9 @@ export default function Comps() {
                 <H3>Top Tier</H3>
             </Container>
             <div>
-                
+                {dados.map(dado => {
+                    <CardComposicoes  />
+                })}
             </div>
         </CompsSection>
     )
