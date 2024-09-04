@@ -37,6 +37,7 @@ const ComposicaoContainer = styled.div`
 
 const InfoContainer = styled.div`
     margin-top: 10px;
+    margin-bottom: 20px;
     background-color: #222;
     color: #fff;
     border-radius: 10px;
@@ -52,7 +53,7 @@ const InfoContainer = styled.div`
     ${({ isOpen }) =>
         isOpen &&
         css`
-            max-height: 800px; /* Ajuste conforme o conteúdo */
+            max-height: 800px; 
             opacity: 1;
             padding: 20px;
         `}
@@ -122,7 +123,6 @@ export default function Comps() {
                             onClick={() => handleCardClick(dado)}
                         />
                         <InfoContainer isOpen={selectedComposicao && selectedComposicao.id === dado.id}>
-                            <h2>{dado.tituloCard}</h2>
                             <img src={dado.imagemComp} alt={`Composição de ${dado.tituloCard}`} />
                             <h3>Quando jogar:</h3>
                             <p>{dado.descricao.quandoJogar}</p>
