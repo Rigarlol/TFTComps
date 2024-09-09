@@ -7,6 +7,7 @@ import Rodape from './components/Rodape'
 import Sobre from './pages/Sobre'
 import Comps from './pages/Comps'
 import Guias from './pages/Guias'
+import Login from './pages/Login'
 
 const Container = styled.div`
   max-width: 1280px;
@@ -23,6 +24,7 @@ function App() {
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/comps" element={<Comps />} />
           <Route path='/guias' element={<Guias />} />
+          <Route path= '/login' element={<Login />}/>
         </Routes>
       </Container>
       <Rodape />
