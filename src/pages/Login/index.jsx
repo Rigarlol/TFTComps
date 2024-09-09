@@ -1,7 +1,8 @@
 import styled from "styled-components"
 import CampoTexto from "../../components/CampoTexto"
 import { useState } from "react"
-import Botao from "../../components/Botao"
+import { useNavigate } from "react-router"
+
 
 
 const ContainerLogin = styled.div`
@@ -39,15 +40,25 @@ const Button = styled.button`
     }
 `
 
-
 export default function Login(){
     const [usuario, setUsuario] = useState('')
     const [senha, setSenha] = useState('')
 
+    const ADMIN_USUARIO = "admin"
+    const ADMIN_SENHA = "12345"
+
+    //hook para a navegação
+    const navigate = useNavigate()
+
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log('usuario: ' + usuario);
-        console.log('senha: ' + senha);
+        
+        if (usuario === ADMIN_USUARIO && senha === ADMIN_SENHA) {
+            alert("Login realizado com sucesso!")
+            navigate('/enviarcomps')
+        } else {
+            alert("Login inválido!")
+        }
     }
     
     return (
