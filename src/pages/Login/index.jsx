@@ -3,8 +3,6 @@ import CampoTexto from "../../components/CampoTexto"
 import { useState } from "react"
 import { useNavigate } from "react-router"
 
-
-
 const ContainerLogin = styled.div`
     padding: 80px 4%;
     max-width: 1280px;
